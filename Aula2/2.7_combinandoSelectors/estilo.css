@@ -1,0 +1,36 @@
+h2 {
+    color: blue;
+}
+
+h5 {
+    color: blue;
+}
+
+p {
+    color: rgb(228, 231, 32);
+}   
+
+li {
+    color: orange;
+}
+
+li.usada {
+    color: rgb(235, 15, 51);
+}
+
+p.alimentos {
+    color: aquamarine;
+}
+
+li {
+    color: rgb(5, 5, 90);
+}
+
+p.tipoMaterial {
+    color: black;
+}
+
+.moveis > .usada {
+    color: aquamarine;
+
+}
