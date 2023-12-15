@@ -44,6 +44,10 @@ section {
     margin: 5px; 
 }
 
+.menu.ul.li{
+    text-align: justify;
+}
+
 .noticias {
     background-color: rgb(117, 115, 115);
     padding: 15px;
