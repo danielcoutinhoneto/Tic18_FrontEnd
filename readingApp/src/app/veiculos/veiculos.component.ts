@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-veiculos',
@@ -8,5 +8,10 @@ import { Component, Input } from '@angular/core';
 export class VeiculosComponent {
   @Input() veiculos: any[] = [];
 
-  ngOnInit(): void {}
+  @Output() tipoDeVeiculoSelecionado = new EventEmitter<any>();
+
+  selectVeiculo(veiculoSelecionado: any) {
+    console.log('Teste veiculo selecionado', veiculoSelecionado);
+    this.tipoDeVeiculoSelecionado.emit(veiculoSelecionado);
+  }
 }

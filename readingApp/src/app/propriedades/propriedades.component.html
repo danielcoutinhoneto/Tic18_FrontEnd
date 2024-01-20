@@ -1,0 +1,11 @@
+<div *ngIf="veiculoSelecionada">
+ <p>{{veiculoSelecionada.Name}}</p>
+ <ul>
+  <li *ngFor = "let propriedade of obterChaves()">
+    <button>{{propriedade}}</button>
+  </li>
+ </ul>
+</div>
+<br>
+
+

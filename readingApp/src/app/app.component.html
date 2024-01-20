@@ -1,3 +1,4 @@
 <app-categorias [categorias]="veiculos" (categoriaSelecionada)="selecionarCategoria($event)"></app-categorias>
 <br>
-<app-veiculos [veiculos]="tipoDeVeiculoSelecionado"></app-veiculos>
+<app-veiculos [veiculos]="tipoDeVeiculoSelecionado"  (tipoDeVeiculoSelecionado)="selecionarVeiculo($event)"></app-veiculos>
+<app-propriedades [veiculoSelecionada]="veiculoSelecionado" ></app-propriedades>

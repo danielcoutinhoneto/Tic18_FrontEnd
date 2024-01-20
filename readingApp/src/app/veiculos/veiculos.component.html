@@ -1,6 +1,6 @@
 <div *ngIf="veiculos">
   <div  *ngFor="let veiculo of veiculos"><br>
-    <button title="{{veiculo.Name}}">{{veiculo.Name}}</button>
+    <button (click)="selectVeiculo(veiculo)" title="{{veiculo.Name}}">{{veiculo.Name}}</button>
   </div>
 </div>
 <br>
