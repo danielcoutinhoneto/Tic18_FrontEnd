@@ -1,5 +1,11 @@
 <!-- barra-busca.component.html -->
-<div>
-  <label>Informe os dados da Pesquisa: <input type="text" #termoBuscaInput></label>
+<div class="pesquisa-container">
+  <label>Informe os dados da Pesquisa <br><br><input type="text" #termoBuscaInput class="input-pesquisa"></label>
   <button (click)="enviarBusca(termoBuscaInput.value)">Pesquisar</button>
+</div>
+
+<div *ngFor="let result resultadosAtualizados" class="resultado-item">
+  <!-- Ajustando o link para envolver o título -->
+  <h3><a [routerLink]="['/topicos', result.pageid]">{{ result.title }}</a></h3>
+  <p [innerHtml]="result.snippet"></p>
 </div>
