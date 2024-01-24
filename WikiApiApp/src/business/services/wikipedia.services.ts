@@ -15,6 +15,7 @@ export class WikipediaService {
       .set('action', 'query')
       .set('format', 'json')
       .set('list', 'search')
+      .set('origin', '*')
       .set('srsearch', termo);
 
     // URL da API da Wikipedia

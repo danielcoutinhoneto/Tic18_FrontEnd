@@ -15,6 +15,7 @@ export class BarraBuscaComponent {
   enviarBusca(termo: string) {
     this.wikipediaService
       .getResultadosPesquisa(termo)
+      .pipe()
       .subscribe((resultados: any) => {
         const artigosEncontrados = resultados.query.search.map(
           (artigo: any) => artigo.title

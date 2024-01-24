@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BarraBuscaComponent } from './barra-busca/barra-busca.component';
 import { ResultadoPesquisaComponent } from './resultado-pesquisa/resultado-pesquisa.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { ResultadoPesquisaComponent } from './resultado-pesquisa/resultado-pesqu
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
