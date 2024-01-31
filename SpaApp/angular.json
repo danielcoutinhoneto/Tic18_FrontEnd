@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "WikiApiApp": {
+    "SpaApp": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/wiki-api-app",
+            "outputPath": "dist/spa-app",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -67,10 +67,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "WikiApiApp:build:production"
+              "buildTarget": "SpaApp:build:production"
             },
             "development": {
-              "buildTarget": "WikiApiApp:build:development"
+              "buildTarget": "SpaApp:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -78,7 +78,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "WikiApiApp:build"
+            "buildTarget": "SpaApp:build"
           }
         },
         "test": {
@@ -101,8 +101,5 @@
         }
       }
     }
-  },
-  "cli": {
-    "analytics": "729ef582-6fc3-4523-b680-7337edee46cb"
   }
 }
