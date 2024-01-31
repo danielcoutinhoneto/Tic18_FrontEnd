@@ -3,9 +3,10 @@
   <label>Informe os dados da Pesquisa <br><br><input type="text" #termoBuscaInput class="input-pesquisa"></label>
   <button (click)="enviarBusca(termoBuscaInput.value)">Pesquisar</button>
 </div>
-
-<div *ngFor="let result resultadosAtualizados" class="resultado-item">
-  <!-- Ajustando o link para envolver o título -->
-  <h3><a [routerLink]="['/topicos', result.pageid]">{{ result.title }}</a></h3>
-  <p [innerHtml]="result.snippet"></p>
+<div *ngIf="resultadosAtualizados">
+  <div *ngFor="let result resultadosAtualizados" class="resultado-item">
+    <!-- Ajustando o link para envolver o título -->
+    <p [innerHTML]="result.snippet"></p>
+    <h3><a href="https://en.wikipedia.org/wiki?curid={{result.pageid}}" rel="noopener" target="_blank">{{result.title}}</a></h3>
+  </div>
 </div>

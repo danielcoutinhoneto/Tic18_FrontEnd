@@ -21,6 +21,7 @@ export class BarraBuscaComponent {
           (artigo: any) => artigo.title
         );
         this.resultadosAtualizados.emit(artigosEncontrados);
+        console.log("Pesquisa", artigosEncontrados)
       });
   }
 }

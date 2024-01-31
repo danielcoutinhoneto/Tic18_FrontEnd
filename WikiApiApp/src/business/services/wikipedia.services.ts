@@ -21,6 +21,8 @@ export class WikipediaService {
     // URL da API da Wikipedia
     const apiUrl = 'https://en.wikipedia.org/w/api.php';
 
+    //'https://pt.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=uesc&origin=*';
+
     // Fazendo a requisição GET para a API
     return this.http.get(apiUrl, { params });
   }
